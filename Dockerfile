@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     nano 
 # && rm -rf /var/lib/apt/lists/*
+RUN docker-php-ext-install mysqli
 ADD composer-install.sh /var/
 RUN chmod +x /var/composer-install.sh
 Run /var/composer-install.sh
