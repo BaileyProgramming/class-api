@@ -14,6 +14,6 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN composer require slim/slim "3.0"
 RUN a2enmod rewrite
 ADD conn.php /var/www/html/
-RUN mv /var/www/html/public/_htaccess /var/www/html/public/.htaccess
 ADD 000-default.conf /etc/apache2/sites-available/
 ADD public /var/www/html/public/
+RUN mv /var/www/html/public/_htaccess /var/www/html/public/.htaccess
